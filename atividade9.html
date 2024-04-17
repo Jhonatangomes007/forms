@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    // Função para ler o ano de nascimento do usuário
+function lerAnoNascimento() {
+    while (true) {
+        let ano = parseInt(prompt("Digite o ano de seu nascimento:"));
+        if (!isNaN(ano) && ano > 0) {
+            return ano;
+        }
+        alert("Por favor, digite um ano válido.");
+    }
+}
+
+// Função para determinar se a pessoa pode votar este ano
+function verificarPodeVotar(anoNascimento) {
+    let anoAtual = new Date().getFullYear();
+    let idade = anoAtual - anoNascimento;
+    return idade >= 16;
+}
+
+// Ler o ano de nascimento do usuário
+let anoNascimento = lerAnoNascimento();
+
+// Verificar se a pessoa pode votar este ano e exibir a mensagem correspondente
+if (verificarPodeVotar(anoNascimento)) {
+    alert("Você poderá votar este ano.");
+} else {
+    alert("Você não poderá votar este ano.");
+}
+
+ </script>
+</body>
+</html>

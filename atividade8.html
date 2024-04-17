@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    // Função para ler um número do usuário entre 0 e 10
+function lerNumero(mensagem) {
+    while (true) {
+        let numero = parseFloat(prompt(mensagem));
+        if (!isNaN(numero) && numero > 0 && numero < 10) {
+            return numero;
+        }
+        alert("Por favor, digite um número válido entre 0 e 10.");
+    }
+}
+
+// Ler os quatro números
+let numeros = [];
+for (let i = 0; i < 4; i++) {
+    numeros.push(lerNumero(`Digite o número ${i + 1}:`));
+}
+
+// Calcular a média dos números
+let soma = numeros.reduce((total, numero) => total + numero, 0);
+let media = soma / numeros.length;
+
+// Verificar se a média é maior que cinco e exibir a mensagem correspondente
+if (media > 5) {
+    alert("Você passou no teste.");
+} else {
+    alert("Tente novamente.");
+}
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    // Função para ler um valor do usuário
+function lerValor(mensagem) {
+    while (true) {
+        let valor = parseFloat(prompt(mensagem));
+        if (!isNaN(valor)) {
+            return valor;
+        }
+        alert("Por favor, digite um valor numérico válido.");
+    }
+}
+
+// Array para armazenar os valores lidos
+let valores = [];
+
+// Ler os 10 valores e armazená-los no array
+for (let i = 0; i < 10; i++) {
+    let valor = lerValor(`Digite o valor ${i + 1}:`);
+    valores.push(valor);
+}
+
+// Calcular a média aritmética dos valores
+let soma = 0;
+for (let i = 0; i < valores.length; i++) {
+    soma += valores[i];
+}
+let media = soma / valores.length;
+
+// Exibir os valores informados e a média aritmética
+alert("Valores informados: " + valores.join(", "));
+alert("Média aritmética: " + media.toFixed(2)); // Limitando a duas casas decimais
+
+ </script>
+</body>
+</html>

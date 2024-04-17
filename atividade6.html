@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    // Função para ler um valor do usuário
+function lerValor(mensagem) {
+    while (true) {
+        let valor = parseFloat(prompt(mensagem));
+        if (!isNaN(valor)) {
+            return valor;
+        }
+        alert("Por favor, digite um valor numérico válido.");
+    }
+}
+
+// Variável para armazenar a soma dos valores
+let soma = 0;
+
+// Ler os 10 valores e calcular a soma
+for (let i = 0; i < 10; i++) {
+    let valor = lerValor(`Digite o valor ${i + 1}:`);
+    soma += valor;
+}
+
+// Exibir a soma total dos valores
+alert("A soma total dos 10 números é: " + soma);
+
+ </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    // Solicitar ao usuário dois números
+let numero1 = parseFloat(prompt("Digite o primeiro número:"));
+let numero2 = parseFloat(prompt("Digite o segundo número:"));
+
+// Verificar qual número é maior
+let maiorNumero;
+
+if (numero1 > numero2) {
+    maiorNumero = numero1;
+} else if (numero2 > numero1) {
+    maiorNumero = numero2;
+} else {
+    maiorNumero = "Os números são iguais.";
+}
+
+// Exibir o maior número
+alert("O maior número é: " + maiorNumero);
+
+ </script>
+</body>
+</html>

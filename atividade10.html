@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    // Função para ler a senha do usuário
+function lerSenha() {
+    return prompt("Digite a senha:");
+}
+
+// Função para verificar a validade da senha
+function verificarSenha(senha) {
+    return senha === "1234";
+}
+
+// Ler a senha do usuário
+let senhaUsuario = lerSenha();
+
+// Verificar se a senha é válida e exibir a mensagem correspondente
+if (verificarSenha(senhaUsuario)) {
+    alert("ACESSO PERMITIDO");
+} else {
+    alert("ACESSO NEGADO");
+}
+
+ </script>
+</body>
+</html>

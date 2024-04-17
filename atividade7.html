@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+ <script>
+    // Função para ler um valor do usuário
+function lerValor(mensagem) {
+    while (true) {
+        let valor = parseFloat(prompt(mensagem));
+        if (!isNaN(valor)) {
+            return valor;
+        }
+        alert("Por favor, digite um valor numérico válido.");
+    }
+}
+
+// Array para armazenar todos os números informados
+let numeros = [];
+
+// Variável para armazenar a soma dos números menores que 72
+let somaMenorQue72 = 0;
+
+// Ler os 6 números e somar os menores que 72
+for (let i = 0; i < 6; i++) {
+    let numero = lerValor(`Digite o número ${i + 1}:`);
+    numeros.push(numero); // Armazenar o número informado
+
+    if (numero < 72) {
+        somaMenorQue72 += numero;
+    }
+}
+
+// Exibir todos os números informados
+alert("Números informados: " + numeros.join(", "));
+
+// Exibir a soma dos números menores que 72
+alert("Soma dos números menores que 72: " + somaMenorQue72);
+
+ </script>
+</body>
+</html>
